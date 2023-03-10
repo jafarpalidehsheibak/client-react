@@ -7,11 +7,14 @@ function UpdateTask(props) {
     if (task.trim() === "" || props.task.todo === task) return;
     else {
       axios
-        .put(`https://jafarpalidehsheibak.onrender.com/${props.task._id}`, {
-          _id: props.task._id,
-          todo: task,
-          isComplete: props.task.isComplete,
-        })
+        .put(
+          `https://jafarpalidehsheibak.onrender.com/api/tasks/${props.task._id}`,
+          {
+            _id: props.task._id,
+            todo: task,
+            isComplete: props.task.isComplete,
+          }
+        )
         .then((res) => {
           props.removePopup();
           props.updatetask(res.data);
