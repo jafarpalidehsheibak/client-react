@@ -7,7 +7,7 @@ function UpdateTask(props) {
     if (task.trim() === "" || props.task.todo === task) return;
     else {
       axios
-        .put(`http://localhost:8000/api/tasks/${props.task._id}`, {
+        .put(`https://jafarpalidehsheibak.onrender.com/${props.task._id}`, {
           _id: props.task._id,
           todo: task,
           isComplete: props.task.isComplete,

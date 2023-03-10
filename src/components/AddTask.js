@@ -9,7 +9,7 @@ function AddTask(props) {
       return;
     } else {
       axios
-        .post("http://localhost:8000/api/tasks", {
+        .post("https://jafarpalidehsheibak.onrender.com/api/tasks", {
           todo: task,
           isComplete: false,
         })

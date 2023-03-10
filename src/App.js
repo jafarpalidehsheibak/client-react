@@ -9,7 +9,7 @@ function App() {
   const [showPopup, setShowPopup] = useState(false);
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/tasks")
+      .get("https://jafarpalidehsheibak.onrender.com/api/tasks")
       .then((res) => setTodolist(res.data))
       .catch((err) => console.log(err));
   }, []);
